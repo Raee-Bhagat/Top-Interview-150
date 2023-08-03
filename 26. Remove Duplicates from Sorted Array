@@ -1,0 +1,17 @@
+# Input: nums = [1,1,2]
+# Output: 2, nums = [1,2,_]
+# Explanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
+# It does not matter what you leave beyond the returned k (hence they are underscores).
+
+class Solution(object):
+    def removeDuplicates(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        k = 0 # pointer to count number of non-duplicates
+        for i in range(len(nums)): # i iterate through the list
+            if nums[k] != nums[i]: # checking for non-duplicates
+                nums[k+1] = nums[i] # first value of array is non-duplicate so keep that as it is and start storing for next indexing
+                k+=1
+        return k+1
