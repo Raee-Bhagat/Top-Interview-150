@@ -1,0 +1,8 @@
+class Solution(object):
+    def twoSum(self, nums, target):
+        dict={}
+        for i in range(len(nums)):
+            c = target - nums[i]
+            if c in dict:
+                return[i, dict[c]]
+            dict[nums[i]]=i
