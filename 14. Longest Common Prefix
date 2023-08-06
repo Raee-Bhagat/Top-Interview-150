@@ -1,0 +1,13 @@
+def longestCommonPrefix(strs):
+        if not strs:
+            return None
+            
+        first_word = strs[0]
+        common_prefix = first_word
+        for word in strs[1:]:
+            while not word.startswith(common_prefix):
+                common_prefix = common_prefix[:-1]
+                
+            if common_prefix == "":
+                break
+        return common_prefix
