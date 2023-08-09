@@ -1,0 +1,3 @@
+from itertools import combinations
+def combine(n,k):
+    return list(combinations(range(1, n+1), k)) #combinations(from , to , no. of elements in each combination)
