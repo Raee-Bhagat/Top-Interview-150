@@ -1,0 +1,10 @@
+def thirdMax(nums):
+    if len(nums) <= 2: 
+        return max(nums)
+    else:
+        nums_arr = list(set(nums))
+        nums_arr.sort(reverse=True)
+
+        if len(nums_arr) < 3:
+            return nums_arr[0]
+    return nums_arr[2]
