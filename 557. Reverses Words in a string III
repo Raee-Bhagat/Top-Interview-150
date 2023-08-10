@@ -1,0 +1,5 @@
+def reverseWords(s):
+    words = s.split()
+    reverse_word = [word[::-1] for word in words] # s[::-1], list, string reverse order
+    reverse_sen  = " ".join(reverse_word)
+    return reverse_sen
