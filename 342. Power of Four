@@ -1,0 +1,7 @@
+def isPowerOfFour(n):
+    if n <= 0: return False # num is negative, return false
+    while n > 1: # all positive numbers only
+        if n % 4 != 0: # if num is not divisible by 4, return false
+            return False
+        n //= 4 # n divided by 4, storing quotient as n and repeat, i.e. power of 4, storing quotient to n
+    return n == 1 # checks if n = 1, return True, indicating that the given num is power of 4, else return False, not power of 4
