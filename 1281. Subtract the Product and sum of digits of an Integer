@@ -1,0 +1,16 @@
+class Solution(object):
+    def subtractProductAndSum(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        add = 0
+        product = 1
+        if not n:
+            return 0
+        while n:
+            dig = n % 10
+            n = n // 10 
+            product = product * dig
+            add = add + dig 
+        return(product - add)
